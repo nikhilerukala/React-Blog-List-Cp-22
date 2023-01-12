@@ -1,19 +1,18 @@
-// Write your JS code here
 import './index.css'
 
 const BlogItem = props => {
-  const {details} = props
-  const {title, publishedDate, description} = details
+  const {blogDetails} = props
+  const {title, description, publishedDate} = blogDetails
+
   return (
-    <li>
-      <div className="title">
-        <h1>{title}</h1>
-        <p>{publishedDate}</p>
+    <li className="blog-item">
+      <div className="blog-details-container">
+        <h1 className="blog-title">{title}</h1>
+        <p className="blog-published-date">{publishedDate}</p>
       </div>
-      <div>
-        <p>{description}</p>
-      </div>
+      <p className="blog-description">{description}</p>
     </li>
   )
 }
+
 export default BlogItem
